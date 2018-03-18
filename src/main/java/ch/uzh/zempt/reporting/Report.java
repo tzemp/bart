@@ -1,6 +1,6 @@
 package ch.uzh.zempt.reporting;
 
-import ch.uzh.zempt.parser.ParserSummary;
+import ch.uzh.zempt.parser.Parser;
 import ch.uzh.zempt.parser.hints.Hint;
 import ch.uzh.zempt.stackoverflow.StackExchangeAnswer;
 import ch.uzh.zempt.stackoverflow.StackExchangeQuestion;
@@ -20,16 +20,16 @@ public class Report {
     private StackExchangeQuestion bestQuestion;
     private List<String> log;
 
-    public Report (String project, ParserSummary parserSummary, List<String> log) {
+    public Report (String project, Parser parser) {
         this.project = project;
-        this.goal = parserSummary.getFailedGoal();
-        this.errorCause = parserSummary.getErrorCause();
-        this.hint = parserSummary.getHint();
-        this.bestQuestion = parserSummary.getBestQuestion();
+        this.goal = parser.getBuild().getBuildSection().getFailedGoal();
+        this.errorCause = parser.getBuild().getBuildSection().getErrorCause();
+        this.hint = parser.getBuild().getHint();
+        this.bestQuestion = parser.getBestQuestion();
         if (this.bestQuestion != null) {
-            this.bestSolution = parserSummary.getBestQuestion().getBestAnswer();
+            this.bestSolution = parser.getBestQuestion().getBestAnswer();
         }
-        this.log = log;
+        this.log = parser.getBuild().getLog();
     }
 
     public String getProject() {

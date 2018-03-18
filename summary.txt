@@ -1,0 +1,51 @@
+===============================
+BART - Build Summarization
+===============================
+Build Status: Failed 
+Failed goal: org.apache.maven.plugins:maven-surefire-plugin:2.6:test
+Error cause:  There are test failures
+Reactor: 
+SUCCESS: Morphia Build
+SUCCESS: morphia
+FAILURE: morphia-no-proxy-deps
+SKIPPED: JSR303 Validation
+SKIPPED: Logging via SLF4J
+SKIPPED: JRebel Plugin
+SKIPPED: Guice Plugin
+SKIPPED: EntityScanner Plugin
+===============================
+Reason for Build Failure:
+ There are test failures
+===============================
+Your build contains 1 test error(s). Please check the test(s) below: 
+------
+File: com.github.jmkgreen.morphia.TestPerf
+Test: testAddressInsertPerf
+Line: null
+Reason: null
+------
+===============================
+Stack Exchange Analysis 
+This may help you fix your build: 
+Maven will try to install this plugin along with dependencies first time in .m2/repository folder, due proxy issues dependencies failing to download.
+so,
+Update the Maven project:
+
+Steps:
+
+Right-click on "project"
+Go to "Maven" >> "Update"
+Wait for all the changes to be applied
+Commit the changes (if code is on repo)
+Run
+
+Also check the artifactid, groupid, version of plugins along with dependencies.
+
+Full Discussion: https://stackoverflow.com/questions/25757539/failed-to-execute-goal-org-apache-maven-pluginsmaven-surefire-plugin2-4-3test
+===============================
+Other useful resources: 
+Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.16:test (default-test) on project mahout-math: There are test failures: https://stackoverflow.com/questions/39928112/failed-to-execute-goal-org-apache-maven-pluginsmaven-surefire-plugin2-16test
+Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.10:test (default-test) on project MavenSelenium: There are test failures: https://stackoverflow.com/questions/16109229/failed-to-execute-goal-org-apache-maven-pluginsmaven-surefire-plugin2-10test
+Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.4.3:test (default-test) on project smrr: There are test failures: https://stackoverflow.com/questions/25757539/failed-to-execute-goal-org-apache-maven-pluginsmaven-surefire-plugin2-4-3test
+===============================
+

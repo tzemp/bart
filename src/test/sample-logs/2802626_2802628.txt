@@ -1,0 +1,947 @@
+## Meta:: jobId 2802628 | buildId 2802626 | jobList [2802628, 2802627]
+------------------------------------------
+Using worker: jvm-otp2.worker.travis-ci.org:jvm-3
+
+$ cd ~/builds
+$ sudo service mongodb start
+ * Starting database mongodb       [80G /etc/init.d/mongodb: 158: /etc/init.d/mongodb: [[: not found
+/etc/init.d/mongodb: 158: /etc/init.d/mongodb: [[: not found
+[74G[ OK ]
+$ sleep 3
+$ git clone --depth=100 --quiet git://github.com/jmkgreen/morphia.git jmkgreen/morphia
+$ cd jmkgreen/morphia
+$ git checkout -qf 7a18c4eec0ab0f84d81c4f539b005aaadc0ea53e
+$ jdk_switcher use openjdk6
+Switching to OpenJDK6 (java-1.6.0-openjdk-i386), JAVA_HOME will be set to /usr/lib/jvm/java-6-openjdk-i386
+update-alternatives: error: no alternatives for apt.
+update-alternatives: error: no alternatives for mozilla-javaplugin.so.
+update-java-alternatives: plugin alternative does not exist: /usr/lib/jvm/java-6-openjdk-i386/jre/lib/i386/IcedTeaPlugin.so
+$ java -version
+java version "1.6.0_24"
+OpenJDK Runtime Environment (IcedTea6 1.11.4) (6b24-1.11.4-1ubuntu0.12.04.1)
+OpenJDK Client VM (build 20.0-b12, mixed mode, sharing)
+$ javac -version
+javac 1.6.0_24
+$ mvn install --quiet -DskipTests=true
+[debug] execute contextualize
+[debug] execute contextualize
+[ERROR] MavenInvocationException: Error when invoking Maven, consult the invoker log file: /home/travis/builds/jmkgreen/morphia/morphia/target/invoker/maven-javadoc-plugin6197838.txt
+[ERROR] MavenInvocationException: Error when invoking Maven, consult the invoker log file: /home/travis/builds/jmkgreen/morphia/morphia/target/invoker/maven-javadoc-plugin1846658538.txt
+[ERROR] MavenInvocationException: Error when invoking Maven, consult the invoker log file: /home/travis/builds/jmkgreen/morphia/morphia/target/invoker/maven-javadoc-plugin1269547075.txt
+[ERROR] MavenInvocationException: Error when invoking Maven, consult the invoker log file: /home/travis/builds/jmkgreen/morphia/morphia/target/invoker/maven-javadoc-plugin417710891.txt
+[ERROR] MavenInvocationException: Error when invoking Maven, consult the invoker log file: /home/travis/builds/jmkgreen/morphia/morphia/target/invoker/maven-javadoc-plugin1211495911.txt
+[ERROR] MavenInvocationException: Error when invoking Maven, consult the invoker log file: /home/travis/builds/jmkgreen/morphia/morphia/target/invoker/maven-javadoc-plugin161351046.txt
+[ERROR] Error fetching link: /home/travis/builds/jmkgreen/morphia/no-proxy-deps-tests/target/apidocs/package-list. Ignored it.
+[ERROR] Error fetching link: /home/travis/builds/jmkgreen/morphia/validation/target/apidocs/package-list. Ignored it.
+[ERROR] Error fetching link: /home/travis/builds/jmkgreen/morphia/logging-slf4j/target/apidocs/package-list. Ignored it.
+[ERROR] Error fetching link: /home/travis/builds/jmkgreen/morphia/jrebel-plug/target/apidocs/package-list. Ignored it.
+[ERROR] Error fetching link: /home/travis/builds/jmkgreen/morphia/guice-plug/target/apidocs/package-list. Ignored it.
+[ERROR] Error fetching link: /home/travis/builds/jmkgreen/morphia/entityscanner-plug/target/apidocs/package-list. Ignored it.
+[debug] execute contextualize
+[debug] execute contextualize
+[debug] execute contextualize
+[debug] execute contextualize
+[ERROR] Error fetching link: /home/travis/builds/jmkgreen/morphia/no-proxy-deps-tests/target/apidocs/package-list. Ignored it.
+[ERROR] Error fetching link: /home/travis/builds/jmkgreen/morphia/logging-slf4j/target/apidocs/package-list. Ignored it.
+[ERROR] Error fetching link: /home/travis/builds/jmkgreen/morphia/jrebel-plug/target/apidocs/package-list. Ignored it.
+[ERROR] Error fetching link: /home/travis/builds/jmkgreen/morphia/guice-plug/target/apidocs/package-list. Ignored it.
+[ERROR] Error fetching link: /home/travis/builds/jmkgreen/morphia/entityscanner-plug/target/apidocs/package-list. Ignored it.
+[debug] execute contextualize
+[debug] execute contextualize
+[ERROR] Error fetching link: /home/travis/builds/jmkgreen/morphia/no-proxy-deps-tests/target/apidocs/package-list. Ignored it.
+[ERROR] Error fetching link: /home/travis/builds/jmkgreen/morphia/jrebel-plug/target/apidocs/package-list. Ignored it.
+[ERROR] Error fetching link: /home/travis/builds/jmkgreen/morphia/guice-plug/target/apidocs/package-list. Ignored it.
+[ERROR] Error fetching link: /home/travis/builds/jmkgreen/morphia/entityscanner-plug/target/apidocs/package-list. Ignored it.
+[debug] execute contextualize
+[debug] execute contextualize
+[debug] execute contextualize
+[debug] execute contextualize
+[ERROR] Error fetching link: /home/travis/builds/jmkgreen/morphia/no-proxy-deps-tests/target/apidocs/package-list. Ignored it.
+[ERROR] Error fetching link: /home/travis/builds/jmkgreen/morphia/jrebel-plug/target/apidocs/package-list. Ignored it.
+[ERROR] Error fetching link: /home/travis/builds/jmkgreen/morphia/entityscanner-plug/target/apidocs/package-list. Ignored it.
+[debug] execute contextualize
+[debug] execute contextualize
+[ERROR] Error fetching link: /home/travis/builds/jmkgreen/morphia/no-proxy-deps-tests/target/apidocs/package-list. Ignored it.
+[ERROR] Error fetching link: /home/travis/builds/jmkgreen/morphia/jrebel-plug/target/apidocs/package-list. Ignored it.
+$ mvn test
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Morphia Build
+[INFO] morphia
+[INFO] morphia-no-proxy-deps
+[INFO] JSR303 Validation
+[INFO] Logging via SLF4J
+[INFO] JRebel Plugin
+[INFO] Guice Plugin
+[INFO] EntityScanner Plugin
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Morphia Build 1.2
+[INFO] ------------------------------------------------------------------------
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building morphia 0.100.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+Downloading: https://repository.apache.org/snapshots/cglib/cglib-nodep/maven-metadata.xml
+Downloading: http://maven.mirrors.travis-ci.org/nexus/content/repositories/sonatype/cglib/cglib-nodep/maven-metadata.xml
+Downloading: https://repository.apache.org/releases/cglib/cglib-nodep/maven-metadata.xml
+Downloading: https://repository.apache.org/releases/org/mongodb/mongo-java-driver/maven-metadata.xml
+Downloading: http://maven.mirrors.travis-ci.org/nexus/content/repositories/sonatype/org/mongodb/mongo-java-driver/maven-metadata.xml
+Downloading: https://repository.apache.org/snapshots/org/mongodb/mongo-java-driver/maven-metadata.xml
+766/766 B               Downloaded: http://maven.mirrors.travis-ci.org/nexus/content/repositories/sonatype/org/mongodb/mongo-java-driver/maven-metadata.xml (766 B at 27.7 KB/sec)
+                        [INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ morphia ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ morphia ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ morphia ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/travis/builds/jmkgreen/morphia/morphia/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:testCompile (default-testCompile) @ morphia ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.10:test (default-test) @ morphia ---
+[INFO] Surefire report directory: /home/travis/builds/jmkgreen/morphia/morphia/target/surefire-reports
+Downloading: http://maven.mirrors.travis-ci.org/nexus/content/repositories/central/org/apache/maven/surefire/surefire-junit4/2.10/surefire-junit4-2.10.pom
+3/3 KB               Downloaded: http://maven.mirrors.travis-ci.org/nexus/content/repositories/central/org/apache/maven/surefire/surefire-junit4/2.10/surefire-junit4-2.10.pom (3 KB at 149.9 KB/sec)
+Downloading: http://maven.mirrors.travis-ci.org/nexus/content/repositories/central/org/apache/maven/surefire/surefire-providers/2.10/surefire-providers-2.10.pom
+3/3 KB            Downloaded: http://maven.mirrors.travis-ci.org/nexus/content/repositories/central/org/apache/maven/surefire/surefire-providers/2.10/surefire-providers-2.10.pom (3 KB at 147.5 KB/sec)
+Downloading: http://maven.mirrors.travis-ci.org/nexus/content/repositories/central/org/apache/maven/surefire/surefire-junit4/2.10/surefire-junit4-2.10.jar
+4/33 KB   8/33 KB   12/33 KB   16/33 KB   20/33 KB   24/33 KB   28/33 KB   32/33 KB   33/33 KB              Downloaded: http://maven.mirrors.travis-ci.org/nexus/content/repositories/central/org/apache/maven/surefire/surefire-junit4/2.10/surefire-junit4-2.10.jar (33 KB at 1551.6 KB/sec)
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.github.jmkgreen.morphia.callbacks.TestCallbackEscalation
+Oct 15, 2012 9:00:35 PM com.github.jmkgreen.morphia.logging.MorphiaLoggerFactory chooseLoggerFactory
+INFO: LoggerImplFactory set to com.github.jmkgreen.morphia.logging.jdk.JDKLoggerFactory
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.469 sec
+Running com.github.jmkgreen.morphia.callbacks.TestMultipleCallbacksPerMethod
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.github.jmkgreen.morphia.callbacks.TestEntityInterceptorMoment
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec
+Running com.github.jmkgreen.morphia.callbacks.TestProblematicPostPersistEntity
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.github.jmkgreen.morphia.callbacks.TestMultipleCallbackMethods
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.github.jmkgreen.morphia.callbacks.TestSimpleValidationViaInterceptor
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec
+Running com.github.jmkgreen.morphia.TestNotSaved
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Running com.github.jmkgreen.morphia.TestDatastoreMerge
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.github.jmkgreen.morphia.optimisticlocks.VersionTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.049 sec
+Running com.github.jmkgreen.morphia.issue148.TestAsListPerf
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.github.jmkgreen.morphia.TestUpdateOps
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.105 sec
+Running com.github.jmkgreen.morphia.utils.FieldNameTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.github.jmkgreen.morphia.utils.LongIdEntityTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.github.jmkgreen.morphia.utils.ReflectionUtilsTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.github.jmkgreen.morphia.TestSuperDatastore
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec
+Running com.github.jmkgreen.morphia.largeObjectsWithCursor.TestStuff
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.996 sec
+Running com.github.jmkgreen.morphia.issue50.TestIdTwice
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.github.jmkgreen.morphia.TestIndexInheritence
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.039 sec
+Running com.github.jmkgreen.morphia.issue49.TestReferenceArray
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.github.jmkgreen.morphia.VersionAnnotationTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.001 sec
+Running com.github.jmkgreen.morphia.TestDatastore
+Oct 15, 2012 9:00:36 PM com.github.jmkgreen.morphia.mapping.DefaultMapper validate
+WARNING: The type(s) for the query/update may be inconsistent; using an instance of type 'java.lang.Integer' for the field 'com.github.jmkgreen.morphia.testutil.TestEntity.id' which is declared as 'java.lang.String'
+ --@--org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.082 sec
+Running com.github.jmkgreen.morphia.logging.MorphiaLogrFactoryTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.github.jmkgreen.morphia.issue47.TestEmbedLoop
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.github.jmkgreen.morphia.TestEmbeddedArrayIndexes
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.github.jmkgreen.morphia.issue155.EnumBehindAnInterfaceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.002 sec
+Running com.github.jmkgreen.morphia.issue173.TestIdTwice
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.github.jmkgreen.morphia.issue325.TestEmbeddedClassname
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 sec
+Running com.github.jmkgreen.morphia.issueA.TestMapping
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.github.jmkgreen.morphia.issue45.TestEmptyEntityMapping
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.github.jmkgreen.morphia.TestIdField
+Oct 15, 2012 9:00:36 PM com.github.jmkgreen.morphia.mapping.DefaultMapper validate
+WARNING: The type(s) for the query/update may be inconsistent; using an instance of type 'com.mongodb.BasicDBObject' for the field 'com.github.jmkgreen.morphia.TestIdField$MapAsId.id' which is declared as 'java.util.Map'
+ --@--org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.018 sec
+Running com.github.jmkgreen.morphia.TestInheritanceMappings
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 sec
+Running com.github.jmkgreen.morphia.TestFrontPageExample
+Oct 15, 2012 9:00:36 PM com.github.jmkgreen.morphia.mapping.DefaultMapper toMongoObject
+SEVERE: Error converting value(null) to reference.
+java.lang.NullPointerException
+	at com.github.jmkgreen.morphia.mapping.DefaultMapper.getKey(DefaultMapper.java:431)
+	at com.github.jmkgreen.morphia.mapping.DefaultMapper.toMongoObject(DefaultMapper.java:374)
+	at com.github.jmkgreen.morphia.query.FieldCriteria.<init>(FieldCriteria.java:48)
+	at com.github.jmkgreen.morphia.query.FieldEndImpl.addCrit(FieldEndImpl.java:35)
+	at com.github.jmkgreen.morphia.query.FieldEndImpl.equal(FieldEndImpl.java:90)
+	at com.github.jmkgreen.morphia.query.FieldEndImpl.equal(FieldEndImpl.java:11)
+	at com.github.jmkgreen.morphia.TestFrontPageExample.testIt(TestFrontPageExample.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Oct 15, 2012 9:00:36 PM com.github.jmkgreen.morphia.mapping.DefaultMapper validate
+WARNING: The type(s) for the query/update may be inconsistent; using an instance of type 'com.github.jmkgreen.morphia.Key' for the field 'com.github.jmkgreen.morphia.TestFrontPageExample$Employee.underlings' which is declared as 'java.util.List'
+ --@--org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
+Running com.github.jmkgreen.morphia.TestDatatypes
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.042 sec
+Running com.github.jmkgreen.morphia.mapping.UpdateRetainsClassInfoTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.github.jmkgreen.morphia.mapping.CollectionOfValuesTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.007 sec
+Running com.github.jmkgreen.morphia.mapping.ListOfDoubleArrayMappingTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.github.jmkgreen.morphia.mapping.NestedMapOrCollTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 sec
+Running com.github.jmkgreen.morphia.mapping.CharacterMappingTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec
+Running com.github.jmkgreen.morphia.mapping.ConcreteClassEmbeddedOverrrideTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Running com.github.jmkgreen.morphia.mapping.TestConstructorArgs
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.github.jmkgreen.morphia.mapping.ByteArrayMappingTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.github.jmkgreen.morphia.mapping.TestSerializerTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
+Running com.github.jmkgreen.morphia.mapping.MapperOptionsTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.github.jmkgreen.morphia.mapping.EnumMappingTest
+Oct 15, 2012 9:00:37 PM com.github.jmkgreen.morphia.mapping.DefaultMapper validate
+WARNING: The type(s) for the query/update may be inconsistent; using an instance of type 'com.github.jmkgreen.morphia.mapping.EnumMappingTest$Foo$1' for the field 'com.github.jmkgreen.morphia.mapping.EnumMappingTest$ContainsEnum.foo' which is declared as 'com.github.jmkgreen.morphia.mapping.EnumMappingTest$Foo'
+ --@--org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+Oct 15, 2012 9:00:37 PM com.github.jmkgreen.morphia.mapping.DefaultMapper validate
+WARNING: The type(s) for the query/update may be inconsistent; using an instance of type 'com.github.jmkgreen.morphia.mapping.EnumMappingTest$Foo$1' for the field 'com.github.jmkgreen.morphia.mapping.EnumMappingTest$ContainsEnum.foo' which is declared as 'com.github.jmkgreen.morphia.mapping.EnumMappingTest$Foo'
+ --@--org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
+Running com.github.jmkgreen.morphia.mapping.ReferencesInEmbeddedTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.06 sec
+Running com.github.jmkgreen.morphia.mapping.lazy.TestLazyCircularReference
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.108 sec
+Running com.github.jmkgreen.morphia.mapping.lazy.TestCGLibLazyProxyFactory
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 sec
+Running com.github.jmkgreen.morphia.mapping.lazy.LazyInEmbeddedTest
+Oct 15, 2012 9:00:37 PM com.github.jmkgreen.morphia.mapping.ReferenceMapper exists
+WARNING: Class com.github.jmkgreen.morphia.mapping.lazy.LazyInEmbeddedTest$OtherEntity is stored in the 'OtherEntity' collection but a reference was found for this type to another collection, 'OtherEntityChild'. The reference will be loaded using the class anyway. { "$ref" : "OtherEntityChild", "$id" : "507c7975e4b065352ab3c57e" }
+Oct 15, 2012 9:00:37 PM com.github.jmkgreen.morphia.mapping.ReferenceMapper exists
+WARNING: Class com.github.jmkgreen.morphia.mapping.lazy.LazyInEmbeddedTest$OtherEntity is stored in the 'OtherEntity' collection but a reference was found for this type to another collection, 'OtherEntityChild'. The reference will be loaded using the class anyway. { "$ref" : "OtherEntityChild", "$id" : "507c7975e4b065352ab3c57e" }
+Oct 15, 2012 9:00:37 PM com.github.jmkgreen.morphia.mapping.ReferenceMapper exists
+WARNING: Class com.github.jmkgreen.morphia.mapping.lazy.LazyInEmbeddedTest$OtherEntity is stored in the 'OtherEntity' collection but a reference was found for this type to another collection, 'OtherEntityChild'. The reference will be loaded using the class anyway. { "$ref" : "OtherEntityChild", "$id" : "507c7975e4b065352ab3c592" }
+Oct 15, 2012 9:00:37 PM com.github.jmkgreen.morphia.mapping.ReferenceMapper exists
+WARNING: Class com.github.jmkgreen.morphia.mapping.lazy.LazyInEmbeddedTest$OtherEntity is stored in the 'OtherEntity' collection but a reference was found for this type to another collection, 'OtherEntityChild'. The reference will be loaded using the class anyway. { "$ref" : "OtherEntityChild", "$id" : "507c7975e4b065352ab3c592" }
+Oct 15, 2012 9:00:37 PM com.github.jmkgreen.morphia.mapping.ReferenceMapper exists
+WARNING: Class com.github.jmkgreen.morphia.mapping.lazy.LazyInEmbeddedTest$OtherEntity is stored in the 'OtherEntity' collection but a reference was found for this type to another collection, 'OtherEntityChild'. The reference will be loaded using the class anyway. { "$ref" : "OtherEntityChild", "$id" : "507c7975e4b065352ab3c592" }
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.056 sec
+Running com.github.jmkgreen.morphia.mapping.lazy.TestReferenceCollection
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.069 sec
+Running com.github.jmkgreen.morphia.mapping.lazy.TestLazySingleReference
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.066 sec
+Running com.github.jmkgreen.morphia.mapping.lazy.TestReferenceMap
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.045 sec
+Running com.github.jmkgreen.morphia.mapping.URIMappingTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
+Running com.github.jmkgreen.morphia.mapping.MapImplTest
+Oct 15, 2012 9:00:37 PM com.github.jmkgreen.morphia.mapping.MappedField discover
+WARNING: The multi-valued field 'com.github.jmkgreen.morphia.mapping.MapImplTest$E.mymap' is a possible heterogenous collection. It cannot be verified. Please declare a valid type to get rid of this warning. null
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.037 sec
+Running com.github.jmkgreen.morphia.mapping.ListOfStringArrayMappingTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.001 sec
+Running com.github.jmkgreen.morphia.mapping.validation.fieldrules.PropertyAndEmbeddedTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
+Running com.github.jmkgreen.morphia.mapping.validation.fieldrules.MapNotSerializableTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.github.jmkgreen.morphia.mapping.validation.fieldrules.EmbeddedAndSerializableTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.github.jmkgreen.morphia.mapping.validation.fieldrules.SerializedNameTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.github.jmkgreen.morphia.mapping.validation.fieldrules.VersionMisuseTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.github.jmkgreen.morphia.mapping.validation.fieldrules.ReferenceAndSerializableTest
+AssertedFailure:com.github.jmkgreen.morphia.mapping.validation.ConstraintViolationException: Number of violations: 1
+ContradictingFieldAnnotation complained about com.github.jmkgreen.morphia.mapping.validation.fieldrules.ReferenceAndSerializableTest$E.r : A field can be either annotated with @Reference OR @Serialized, but not both.
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.github.jmkgreen.morphia.mapping.validation.fieldrules.MapKeyDifferentFromStringTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.github.jmkgreen.morphia.mapping.validation.fieldrules.LazyReferenceOnArrayTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.github.jmkgreen.morphia.mapping.validation.classrules.MultipleVersionsTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.github.jmkgreen.morphia.mapping.validation.classrules.NonStaticInnerClassTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.github.jmkgreen.morphia.mapping.validation.classrules.RegisterAfterUseTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.github.jmkgreen.morphia.mapping.validation.classrules.DuplicatePropertyNameTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.github.jmkgreen.morphia.mapping.validation.classrules.SerializedMapTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
+Running com.github.jmkgreen.morphia.mapping.LocaleMappingTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.github.jmkgreen.morphia.mapping.ClassMappingTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.github.jmkgreen.morphia.TestMapper
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 sec
+Running com.github.jmkgreen.morphia.TestQuery
+Oct 15, 2012 9:00:37 PM com.github.jmkgreen.morphia.mapping.DefaultMapper validate
+WARNING: The type(s) for the query/update may be inconsistent; using an instance of type 'java.lang.Integer' for the field 'com.github.jmkgreen.morphia.TestQuery$ContainsPhotoKey.photo' which is declared as 'com.github.jmkgreen.morphia.Key'
+ --@--org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+Oct 15, 2012 9:00:37 PM com.github.jmkgreen.morphia.mapping.DefaultMapper toMongoObject
+SEVERE: Error converting value(1) to reference.
+com.github.jmkgreen.morphia.mapping.MappingException: Could not get id for java.lang.Integer
+	at com.github.jmkgreen.morphia.mapping.DefaultMapper.getKey(DefaultMapper.java:431)
+	at com.github.jmkgreen.morphia.mapping.DefaultMapper.toMongoObject(DefaultMapper.java:374)
+	at com.github.jmkgreen.morphia.query.FieldCriteria.<init>(FieldCriteria.java:48)
+	at com.github.jmkgreen.morphia.query.FieldCriteria.<init>(FieldCriteria.java:27)
+	at com.github.jmkgreen.morphia.query.QueryImpl.filter(QueryImpl.java:335)
+	at com.github.jmkgreen.morphia.DatastoreImpl.find(DatastoreImpl.java:376)
+	at com.github.jmkgreen.morphia.TestQuery.testReferenceQuery(TestQuery.java:159)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Oct 15, 2012 9:00:38 PM com.github.jmkgreen.morphia.mapping.DefaultMapper validate
+WARNING: The type(s) for the query/update may be inconsistent; using an instance of type 'java.lang.String' for the field 'com.github.jmkgreen.morphia.TestQuery$PhotoWithKeywords.id' which is declared as 'org.bson.types.ObjectId'
+ --@--org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+Oct 15, 2012 9:00:38 PM com.github.jmkgreen.morphia.mapping.DefaultMapper validate
+WARNING: The type(s) for the query/update may be inconsistent; using an instance of type 'java.lang.Integer' for the field 'com.github.jmkgreen.morphia.TestQuery$Keyword.keyword' which is declared as 'java.lang.String'
+ --@--org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+Oct 15, 2012 9:00:38 PM com.github.jmkgreen.morphia.mapping.DefaultMapper validate
+WARNING: The type(s) for the query/update may be inconsistent; using an instance of type '[B' for the field 'com.github.jmkgreen.morphia.TestQuery$Keyword.keyword' which is declared as 'java.lang.String'
+ --@--org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+Oct 15, 2012 9:00:38 PM com.github.jmkgreen.morphia.mapping.DefaultMapper validate
+WARNING: The type(s) for the query/update may be inconsistent; using an instance of type 'java.lang.Integer' for the field 'com.github.jmkgreen.morphia.testutil.TestEntity.id' which is declared as 'java.lang.String'
+ --@--org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+Oct 15, 2012 9:00:38 PM com.github.jmkgreen.morphia.mapping.DefaultMapper validate
+WARNING: The type(s) for the query/update may be inconsistent; using an instance of type 'java.lang.Integer' for the field 'com.github.jmkgreen.morphia.testutil.TestEntity.id' which is declared as 'java.lang.String'
+ --@--org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+Tests run: 40, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.469 sec
+Running com.github.jmkgreen.morphia.issue241.TestMapping
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.github.jmkgreen.morphia.issue345.ExampleServiceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.002 sec
+Running com.github.jmkgreen.morphia.issue194.IndexTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 sec
+Running com.github.jmkgreen.morphia.TestIndexedCapped
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.1 sec
+Running com.github.jmkgreen.morphia.TestWriteConcern
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Running com.github.jmkgreen.morphia.TestMapping
+Oct 15, 2012 9:00:38 PM com.github.jmkgreen.morphia.mapping.MappedField discover
+WARNING: The multi-valued field 'com.github.jmkgreen.morphia.TestMapping$ContainsMapLike.m' is a possible heterogenous collection. It cannot be verified. Please declare a valid type to get rid of this warning. null
+Oct 15, 2012 9:00:38 PM com.github.jmkgreen.morphia.mapping.MappedField discover
+WARNING: The multi-valued field 'com.github.jmkgreen.morphia.testmodel.Article.attributes' is a possible heterogenous collection. It cannot be verified. Please declare a valid type to get rid of this warning. null
+Oct 15, 2012 9:00:38 PM com.github.jmkgreen.morphia.mapping.MappedField discover
+WARNING: The multi-valued field 'com.github.jmkgreen.morphia.testmodel.Article.attributes' is a possible heterogenous collection. It cannot be verified. Please declare a valid type to get rid of this warning. null
+Oct 15, 2012 9:00:38 PM com.github.jmkgreen.morphia.mapping.validation.MappingValidator$LogLine log
+WARNING: MapKeyDifferentFromString complained about com.github.jmkgreen.morphia.testmodel.Article.attributes : Maps cannot be keyed by Object (Map<Object,?>); Use a parametrized type that is supported (Map<String/Enum/Long/ObjectId/..., ?>)
+Oct 15, 2012 9:00:38 PM com.github.jmkgreen.morphia.mapping.validation.MappingValidator$LogLine log
+INFO: MapKeyDifferentFromString complained about com.github.jmkgreen.morphia.testmodel.Article.attributes : Maps cannot be keyed by Object (Map<Object,?>); Use a parametrized type that is supported (Map<String/Enum/Long/ObjectId/..., ?>)
+Tests run: 33, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.192 sec
+Running com.github.jmkgreen.morphia.TestSingleToMultipleConversion
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Running com.github.jmkgreen.morphia.ext.CustomConvertersTest
+Oct 15, 2012 9:00:38 PM com.github.jmkgreen.morphia.converters.DefaultConverters addTypedConverter
+WARNING: Added duplicate converter for class java.lang.Character ; [com.github.jmkgreen.morphia.ext.CustomConvertersTest$CharacterToByteConverter@153f141, com.github.jmkgreen.morphia.converters.CharacterConverter@405f6]
+Oct 15, 2012 9:00:38 PM com.github.jmkgreen.morphia.converters.DefaultConverters addTypedConverter
+WARNING: Added duplicate converter for char ; [com.github.jmkgreen.morphia.ext.CustomConvertersTest$CharacterToByteConverter@153f141, com.github.jmkgreen.morphia.converters.CharacterConverter@405f6]
+Oct 15, 2012 9:00:38 PM com.github.jmkgreen.morphia.converters.DefaultConverters getEncoder
+WARNING: Duplicate converter for class java.lang.Character, returning first one from [com.github.jmkgreen.morphia.ext.CustomConvertersTest$CharacterToByteConverter@153f141, com.github.jmkgreen.morphia.converters.CharacterConverter@405f6]
+Oct 15, 2012 9:00:38 PM com.github.jmkgreen.morphia.converters.DefaultConverters getEncoder
+WARNING: Duplicate converter for class java.lang.Character, returning first one from [com.github.jmkgreen.morphia.ext.CustomConvertersTest$CharacterToByteConverter@153f141, com.github.jmkgreen.morphia.converters.CharacterConverter@405f6]
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.014 sec
+Running com.github.jmkgreen.morphia.ext.EnumValueConverterTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.github.jmkgreen.morphia.ext.NewAnnoationTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.github.jmkgreen.morphia.ext.ExternalMapperExtTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.github.jmkgreen.morphia.ext.IgnoreFieldsAnnotationTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.github.jmkgreen.morphia.TestDAO
+Oct 15, 2012 9:00:38 PM com.github.jmkgreen.morphia.mapping.DefaultMapper validate
+WARNING: The type(s) for the query/update may be inconsistent; using an instance of type 'java.lang.Integer' for the field 'com.github.jmkgreen.morphia.testmodel.Hotel.phoneNumbers' which is declared as 'java.util.List'
+ --@--org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.04 sec
+Running com.github.jmkgreen.morphia.query.TestMandatoryId
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.github.jmkgreen.morphia.query.QueryImplCloneTest
+checking field log v1=com.github.jmkgreen.morphia.logging.jdk.JDKLogger@15872f5 v2=com.github.jmkgreen.morphia.logging.jdk.JDKLogger@15872f5
+checking field cache v1=com.github.jmkgreen.morphia.mapping.cache.DefaultEntityCache@1e33bb8 v2=com.github.jmkgreen.morphia.mapping.cache.DefaultEntityCache@165d0e0
+checking field validateName v1=false v2=false
+checking field validateType v1=false v2=false
+checking field fields v1=null v2=null
+checking field includeFields v1=null v2=null
+checking field sort v1={ "a" : 1} v2={ "a" : 1}
+checking field ds v1=com.github.jmkgreen.morphia.DatastoreImpl@17447c5 v2=com.github.jmkgreen.morphia.DatastoreImpl@17447c5
+checking field dbColl v1=E1 v2=E1
+checking field offset v1=5 v2=5
+checking field limit v1=5 v2=5
+checking field batchSize v1=10 v2=10
+checking field indexHint v1=a v2=a
+checking field clazz v1=class com.github.jmkgreen.morphia.query.QueryImplCloneTest$E1 v2=class com.github.jmkgreen.morphia.query.QueryImplCloneTest$E1
+checking field baseQuery v1=null v2=null
+checking field snapshotted v1=false v2=false
+checking field noTimeout v1=true v2=true
+checking field tail v1=false v2=false
+checking field tail_await_data v1=false v2=false
+checking field readPref v1=null v2=null
+checking field joinMethod v1=AND v2=AND
+checking field children v1=[i $eq 5, a $eq value_a, b $eq value_b, foo $eq bar] v2=[i $eq 5, a $eq value_a, b $eq value_b, foo $eq bar]
+checking field query v1={ "i" : 5 , "a" : "value_a" , "b" : "value_b" , "foo" : "bar"} v2={ "i" : 5 , "a" : "value_a" , "b" : "value_b" , "foo" : "bar"}
+checking field attachedTo v1=null v2=null
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.github.jmkgreen.morphia.query.TestGeoQueries
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.068 sec
+Running com.github.jmkgreen.morphia.query.TestStringPatternQueries
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 sec
+Running com.github.jmkgreen.morphia.query.TestQueryParams
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
+Running com.github.jmkgreen.morphia.converters.IterableConverterNullPointerExceptionTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.github.jmkgreen.morphia.converters.LocaleConverterTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.github.jmkgreen.morphia.converters.NastyEnumTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.github.jmkgreen.morphia.converters.EnumSetTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.github.jmkgreen.morphia.issue80.TestGenericInheritanceMappings
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.github.jmkgreen.morphia.TestPerf
+Time taken morphia: 324ms
+Time taken regular: 298ms
+Time taken batch morphia: 171ms
+Time taken batch regular: 10ms
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 7.565 sec
+Running com.github.jmkgreen.morphia.issue172.NameValuePairTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.github.jmkgreen.morphia.TestKeyType
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.github.jmkgreen.morphia.TestInterfaces
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.github.jmkgreen.morphia.TestMapreduce
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.106 sec
+Running com.github.jmkgreen.morphia.TestGetByKeys
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+
+Results :
+
+Tests run: 272, Failures: 0, Errors: 0, Skipped: 18
+
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building morphia-no-proxy-deps 1.00-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ morphia-no-proxy-deps ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/travis/builds/jmkgreen/morphia/no-proxy-deps-tests/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ morphia-no-proxy-deps ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ morphia-no-proxy-deps ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/travis/builds/jmkgreen/morphia/no-proxy-deps-tests/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:testCompile (default-testCompile) @ morphia-no-proxy-deps ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.6:test (default-test) @ morphia-no-proxy-deps ---
+Downloading: http://maven.mirrors.travis-ci.org/nexus/content/repositories/central/org/apache/maven/surefire/surefire-junit4/2.6/surefire-junit4-2.6.pom
+2/2 KB              Downloaded: http://maven.mirrors.travis-ci.org/nexus/content/repositories/central/org/apache/maven/surefire/surefire-junit4/2.6/surefire-junit4-2.6.pom (2 KB at 108.3 KB/sec)
+Downloading: http://maven.mirrors.travis-ci.org/nexus/content/repositories/central/org/apache/maven/surefire/surefire-providers/2.6/surefire-providers-2.6.pom
+2/2 KB            Downloaded: http://maven.mirrors.travis-ci.org/nexus/content/repositories/central/org/apache/maven/surefire/surefire-providers/2.6/surefire-providers-2.6.pom (2 KB at 61.2 KB/sec)
+Downloading: http://maven.mirrors.travis-ci.org/nexus/content/repositories/central/org/apache/maven/surefire/surefire-junit4/2.6/surefire-junit4-2.6.jar
+4/12 KB   8/12 KB   12/12 KB              Downloaded: http://maven.mirrors.travis-ci.org/nexus/content/repositories/central/org/apache/maven/surefire/surefire-junit4/2.6/surefire-junit4-2.6.jar (12 KB at 608.3 KB/sec)
+[INFO] Surefire report directory: /home/travis/builds/jmkgreen/morphia/no-proxy-deps-tests/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.github.jmkgreen.morphia.mapping.ReferencesInEmbeddedTest
+Oct 15, 2012 9:00:47 PM com.github.jmkgreen.morphia.logging.MorphiaLoggerFactory chooseLoggerFactory
+INFO: LoggerImplFactory set to com.github.jmkgreen.morphia.logging.jdk.JDKLoggerFactory
+Oct 15, 2012 9:00:47 PM com.github.jmkgreen.morphia.mapping.lazy.LazyFeatureDependencies assertDependencyFullFilled
+WARNING: Lazy loading impossible due to missing dependencies.
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.328 sec
+Running com.github.jmkgreen.morphia.mapping.validation.classrules.RegisterAfterUseTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.004 sec
+Running com.github.jmkgreen.morphia.callbacks.TestMultipleCallbackMethods
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
+Running com.github.jmkgreen.morphia.mapping.lazy.TestReferenceCollection
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.github.jmkgreen.morphia.converters.LocaleConverterTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.github.jmkgreen.morphia.TestSingleToMultipleConversion
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec
+Running com.github.jmkgreen.morphia.mapping.validation.classrules.MultipleVersionsTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.github.jmkgreen.morphia.mapping.validation.classrules.NonStaticInnerClassTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Running com.github.jmkgreen.morphia.TestDatatypes
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec
+Running com.github.jmkgreen.morphia.utils.FieldNameTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.github.jmkgreen.morphia.mapping.lazy.TestReferenceMap
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.github.jmkgreen.morphia.utils.LongIdEntityTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
+Running com.github.jmkgreen.morphia.mapping.CharacterMappingTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec
+Running com.github.jmkgreen.morphia.issue155.EnumBehindAnInterfaceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.001 sec
+Running com.github.jmkgreen.morphia.issue172.NameValuePairTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.001 sec
+Running com.github.jmkgreen.morphia.TestInheritanceMappings
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.042 sec
+Running com.github.jmkgreen.morphia.callbacks.TestEntityInterceptorMoment
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.github.jmkgreen.morphia.TestFrontPageExample
+Oct 15, 2012 9:00:47 PM com.github.jmkgreen.morphia.mapping.DefaultMapper toMongoObject
+SEVERE: Error converting value(null) to reference.
+java.lang.NullPointerException
+	at com.github.jmkgreen.morphia.mapping.DefaultMapper.getKey(DefaultMapper.java:431)
+	at com.github.jmkgreen.morphia.mapping.DefaultMapper.toMongoObject(DefaultMapper.java:374)
+	at com.github.jmkgreen.morphia.query.FieldCriteria.<init>(FieldCriteria.java:48)
+	at com.github.jmkgreen.morphia.query.FieldEndImpl.addCrit(FieldEndImpl.java:35)
+	at com.github.jmkgreen.morphia.query.FieldEndImpl.equal(FieldEndImpl.java:90)
+	at com.github.jmkgreen.morphia.query.FieldEndImpl.equal(FieldEndImpl.java:11)
+	at com.github.jmkgreen.morphia.TestFrontPageExample.testIt(TestFrontPageExample.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:59)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:120)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:103)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:169)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:350)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1021)
+Oct 15, 2012 9:00:47 PM com.github.jmkgreen.morphia.mapping.DefaultMapper validate
+WARNING: The type(s) for the query/update may be inconsistent; using an instance of type 'com.github.jmkgreen.morphia.Key' for the field 'com.github.jmkgreen.morphia.TestFrontPageExample$Employee.underlings' which is declared as 'java.util.List'
+ --@--org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:59)
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 sec
+Running com.github.jmkgreen.morphia.mapping.TestConstructorArgs
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.github.jmkgreen.morphia.TestDAO
+Oct 15, 2012 9:00:47 PM com.github.jmkgreen.morphia.mapping.DefaultMapper validate
+WARNING: The type(s) for the query/update may be inconsistent; using an instance of type 'java.lang.Integer' for the field 'com.github.jmkgreen.morphia.testmodel.Hotel.phoneNumbers' which is declared as 'java.util.List'
+ --@--org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:59)
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.058 sec
+Running com.github.jmkgreen.morphia.query.QueryImplCloneTest
+checking field log v1=com.github.jmkgreen.morphia.logging.jdk.JDKLogger@18235ed v2=com.github.jmkgreen.morphia.logging.jdk.JDKLogger@18235ed
+checking field cache v1=com.github.jmkgreen.morphia.mapping.cache.DefaultEntityCache@1a28362 v2=com.github.jmkgreen.morphia.mapping.cache.DefaultEntityCache@5fcf29
+checking field validateName v1=false v2=false
+checking field validateType v1=false v2=false
+checking field fields v1=null v2=null
+checking field includeFields v1=null v2=null
+checking field sort v1={ "a" : 1} v2={ "a" : 1}
+checking field ds v1=com.github.jmkgreen.morphia.DatastoreImpl@88e2dd v2=com.github.jmkgreen.morphia.DatastoreImpl@88e2dd
+checking field dbColl v1=E1 v2=E1
+checking field offset v1=5 v2=5
+checking field limit v1=5 v2=5
+checking field batchSize v1=10 v2=10
+checking field indexHint v1=a v2=a
+checking field clazz v1=class com.github.jmkgreen.morphia.query.QueryImplCloneTest$E1 v2=class com.github.jmkgreen.morphia.query.QueryImplCloneTest$E1
+checking field baseQuery v1=null v2=null
+checking field snapshotted v1=false v2=false
+checking field noTimeout v1=true v2=true
+checking field tail v1=false v2=false
+checking field tail_await_data v1=false v2=false
+checking field readPref v1=null v2=null
+checking field joinMethod v1=AND v2=AND
+checking field children v1=[i $eq 5, a $eq value_a, b $eq value_b, foo $eq bar] v2=[i $eq 5, a $eq value_a, b $eq value_b, foo $eq bar]
+checking field query v1={ "i" : 5 , "a" : "value_a" , "b" : "value_b" , "foo" : "bar"} v2={ "i" : 5 , "a" : "value_a" , "b" : "value_b" , "foo" : "bar"}
+checking field attachedTo v1=null v2=null
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 sec
+Running com.github.jmkgreen.morphia.TestNotSaved
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Running com.github.jmkgreen.morphia.mapping.validation.fieldrules.MapNotSerializableTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Running com.github.jmkgreen.morphia.mapping.lazy.TestCGLibLazyProxyFactory
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.github.jmkgreen.morphia.utils.ReflectionUtilsTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.github.jmkgreen.morphia.mapping.ConcreteClassEmbeddedOverrrideTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.github.jmkgreen.morphia.callbacks.TestMultipleCallbacksPerMethod
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.github.jmkgreen.morphia.mapping.lazy.TestLazySingleReference
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.008 sec
+Running com.github.jmkgreen.morphia.TestKeyType
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.github.jmkgreen.morphia.mapping.MapImplTest
+Oct 15, 2012 9:00:47 PM com.github.jmkgreen.morphia.mapping.MappedField discover
+WARNING: The multi-valued field 'com.github.jmkgreen.morphia.mapping.MapImplTest$E.mymap' is a possible heterogenous collection. It cannot be verified. Please declare a valid type to get rid of this warning. null
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 sec
+Running com.github.jmkgreen.morphia.mapping.lazy.TestLazyCircularReference
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.github.jmkgreen.morphia.largeObjectsWithCursor.TestStuff
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.885 sec
+Running com.github.jmkgreen.morphia.TestIdField
+Oct 15, 2012 9:00:48 PM com.github.jmkgreen.morphia.mapping.DefaultMapper validate
+WARNING: The type(s) for the query/update may be inconsistent; using an instance of type 'com.mongodb.BasicDBObject' for the field 'com.github.jmkgreen.morphia.TestIdField$MapAsId.id' which is declared as 'java.util.Map'
+ --@--org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:59)
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.021 sec
+Running com.github.jmkgreen.morphia.mapping.validation.fieldrules.VersionMisuseTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.github.jmkgreen.morphia.mapping.validation.fieldrules.LazyReferenceOnArrayTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.github.jmkgreen.morphia.TestIndexInheritence
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 sec
+Running com.github.jmkgreen.morphia.callbacks.TestSimpleValidationViaInterceptor
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.github.jmkgreen.morphia.TestPerf
+Time taken morphia: 308ms
+Time taken regular: 289ms
+Time taken batch morphia: 181ms
+Time taken batch regular: 9ms
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 7.33 sec <<< FAILURE!
+Running com.github.jmkgreen.morphia.mapping.ListOfDoubleArrayMappingTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.github.jmkgreen.morphia.TestMapreduce
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.112 sec
+Running com.github.jmkgreen.morphia.ext.ExternalMapperExtTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.github.jmkgreen.morphia.issue194.IndexTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Running com.github.jmkgreen.morphia.converters.NastyEnumTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.github.jmkgreen.morphia.TestUpdateOps
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.083 sec
+Running com.github.jmkgreen.morphia.mapping.CollectionOfValuesTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.008 sec
+Running com.github.jmkgreen.morphia.mapping.ListOfStringArrayMappingTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.002 sec
+Running com.github.jmkgreen.morphia.TestIndexedCapped
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.102 sec
+Running com.github.jmkgreen.morphia.mapping.TestSerializerTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
+Running com.github.jmkgreen.morphia.mapping.URIMappingTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.github.jmkgreen.morphia.ext.NewAnnoationTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.github.jmkgreen.morphia.mapping.validation.fieldrules.MapKeyDifferentFromStringTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.github.jmkgreen.morphia.TestWriteConcern
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
+Running com.github.jmkgreen.morphia.issueA.TestMapping
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.github.jmkgreen.morphia.TestSuperDatastore
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 sec
+Running com.github.jmkgreen.morphia.ext.CustomConvertersTest
+Oct 15, 2012 9:00:56 PM com.github.jmkgreen.morphia.converters.DefaultConverters addTypedConverter
+WARNING: Added duplicate converter for class java.lang.Character ; [com.github.jmkgreen.morphia.ext.CustomConvertersTest$CharacterToByteConverter@100fa88, com.github.jmkgreen.morphia.converters.CharacterConverter@1402772]
+Oct 15, 2012 9:00:56 PM com.github.jmkgreen.morphia.converters.DefaultConverters addTypedConverter
+WARNING: Added duplicate converter for char ; [com.github.jmkgreen.morphia.ext.CustomConvertersTest$CharacterToByteConverter@100fa88, com.github.jmkgreen.morphia.converters.CharacterConverter@1402772]
+Oct 15, 2012 9:00:56 PM com.github.jmkgreen.morphia.converters.DefaultConverters getEncoder
+WARNING: Duplicate converter for class java.lang.Character, returning first one from [com.github.jmkgreen.morphia.ext.CustomConvertersTest$CharacterToByteConverter@100fa88, com.github.jmkgreen.morphia.converters.CharacterConverter@1402772]
+Oct 15, 2012 9:00:56 PM com.github.jmkgreen.morphia.converters.DefaultConverters getEncoder
+WARNING: Duplicate converter for class java.lang.Character, returning first one from [com.github.jmkgreen.morphia.ext.CustomConvertersTest$CharacterToByteConverter@100fa88, com.github.jmkgreen.morphia.converters.CharacterConverter@1402772]
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.015 sec
+Running com.github.jmkgreen.morphia.TestDatastoreMerge
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.github.jmkgreen.morphia.callbacks.TestCallbackEscalation
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 sec
+Running com.github.jmkgreen.morphia.ext.IgnoreFieldsAnnotationTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.github.jmkgreen.morphia.TestQuery
+Oct 15, 2012 9:00:56 PM com.github.jmkgreen.morphia.mapping.DefaultMapper validate
+WARNING: The type(s) for the query/update may be inconsistent; using an instance of type 'java.lang.Integer' for the field 'com.github.jmkgreen.morphia.TestQuery$ContainsPhotoKey.photo' which is declared as 'com.github.jmkgreen.morphia.Key'
+ --@--org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:59)
+Oct 15, 2012 9:00:56 PM com.github.jmkgreen.morphia.mapping.DefaultMapper toMongoObject
+SEVERE: Error converting value(1) to reference.
+com.github.jmkgreen.morphia.mapping.MappingException: Could not get id for java.lang.Integer
+	at com.github.jmkgreen.morphia.mapping.DefaultMapper.getKey(DefaultMapper.java:431)
+	at com.github.jmkgreen.morphia.mapping.DefaultMapper.toMongoObject(DefaultMapper.java:374)
+	at com.github.jmkgreen.morphia.query.FieldCriteria.<init>(FieldCriteria.java:48)
+	at com.github.jmkgreen.morphia.query.FieldCriteria.<init>(FieldCriteria.java:27)
+	at com.github.jmkgreen.morphia.query.QueryImpl.filter(QueryImpl.java:335)
+	at com.github.jmkgreen.morphia.DatastoreImpl.find(DatastoreImpl.java:376)
+	at com.github.jmkgreen.morphia.TestQuery.testReferenceQuery(TestQuery.java:159)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:59)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:120)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:103)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:169)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:350)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1021)
+Oct 15, 2012 9:00:56 PM com.github.jmkgreen.morphia.mapping.lazy.LazyFeatureDependencies assertDependencyFullFilled
+WARNING: Lazy loading impossible due to missing dependencies.
+Oct 15, 2012 9:00:56 PM com.github.jmkgreen.morphia.mapping.DefaultMapper validate
+WARNING: The type(s) for the query/update may be inconsistent; using an instance of type 'java.lang.String' for the field 'com.github.jmkgreen.morphia.TestQuery$PhotoWithKeywords.id' which is declared as 'org.bson.types.ObjectId'
+ --@--org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:59)
+Oct 15, 2012 9:00:56 PM com.github.jmkgreen.morphia.mapping.DefaultMapper validate
+WARNING: The type(s) for the query/update may be inconsistent; using an instance of type 'java.lang.Integer' for the field 'com.github.jmkgreen.morphia.TestQuery$Keyword.keyword' which is declared as 'java.lang.String'
+ --@--org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:59)
+Oct 15, 2012 9:00:56 PM com.github.jmkgreen.morphia.mapping.DefaultMapper validate
+WARNING: The type(s) for the query/update may be inconsistent; using an instance of type '[B' for the field 'com.github.jmkgreen.morphia.TestQuery$Keyword.keyword' which is declared as 'java.lang.String'
+ --@--org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:59)
+Oct 15, 2012 9:00:56 PM com.github.jmkgreen.morphia.mapping.DefaultMapper validate
+WARNING: The type(s) for the query/update may be inconsistent; using an instance of type 'java.lang.Integer' for the field 'com.github.jmkgreen.morphia.testutil.TestEntity.id' which is declared as 'java.lang.String'
+ --@--org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:59)
+Oct 15, 2012 9:00:56 PM com.github.jmkgreen.morphia.mapping.DefaultMapper validate
+WARNING: The type(s) for the query/update may be inconsistent; using an instance of type 'java.lang.Integer' for the field 'com.github.jmkgreen.morphia.testutil.TestEntity.id' which is declared as 'java.lang.String'
+ --@--org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:59)
+Tests run: 40, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.272 sec
+Running com.github.jmkgreen.morphia.mapping.ClassMappingTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.github.jmkgreen.morphia.TestDatastore
+Oct 15, 2012 9:00:56 PM com.github.jmkgreen.morphia.mapping.DefaultMapper validate
+WARNING: The type(s) for the query/update may be inconsistent; using an instance of type 'java.lang.Integer' for the field 'com.github.jmkgreen.morphia.testutil.TestEntity.id' which is declared as 'java.lang.String'
+ --@--org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:59)
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.067 sec
+Running com.github.jmkgreen.morphia.query.TestStringPatternQueries
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 sec
+Running com.github.jmkgreen.morphia.issue325.TestEmbeddedClassname
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Running com.github.jmkgreen.morphia.issue50.TestIdTwice
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.github.jmkgreen.morphia.converters.EnumSetTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.github.jmkgreen.morphia.TestMapper
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
+Running com.github.jmkgreen.morphia.issue173.TestIdTwice
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.github.jmkgreen.morphia.query.TestQueryParams
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.github.jmkgreen.morphia.TestGetByKeys
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.github.jmkgreen.morphia.mapping.validation.fieldrules.EmbeddedAndSerializableTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.github.jmkgreen.morphia.mapping.lazy.LazyInEmbeddedTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.github.jmkgreen.morphia.mapping.NestedMapOrCollTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Running com.github.jmkgreen.morphia.issue345.ExampleServiceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.004 sec
+Running com.github.jmkgreen.morphia.mapping.MapperOptionsTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.github.jmkgreen.morphia.mapping.validation.classrules.DuplicatePropertyNameTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.github.jmkgreen.morphia.mapping.validation.fieldrules.SerializedNameTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.github.jmkgreen.morphia.TestEmbeddedArrayIndexes
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.github.jmkgreen.morphia.TestInterfaces
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.github.jmkgreen.morphia.issue49.TestReferenceArray
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.github.jmkgreen.morphia.optimisticlocks.VersionTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 sec
+Running com.github.jmkgreen.morphia.callbacks.TestProblematicPostPersistEntity
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.github.jmkgreen.morphia.VersionAnnotationTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.001 sec
+Running com.github.jmkgreen.morphia.issue45.TestEmptyEntityMapping
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.github.jmkgreen.morphia.mapping.LocaleMappingTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.github.jmkgreen.morphia.mapping.validation.fieldrules.ReferenceAndSerializableTest
+AssertedFailure:com.github.jmkgreen.morphia.mapping.validation.ConstraintViolationException: Number of violations: 1
+ContradictingFieldAnnotation complained about com.github.jmkgreen.morphia.mapping.validation.fieldrules.ReferenceAndSerializableTest$E.r : A field can be either annotated with @Reference OR @Serialized, but not both.
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.github.jmkgreen.morphia.query.TestGeoQueries
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.055 sec
+Running com.github.jmkgreen.morphia.TestMapping
+Oct 15, 2012 9:00:57 PM com.github.jmkgreen.morphia.mapping.MappedField discover
+WARNING: The multi-valued field 'com.github.jmkgreen.morphia.TestMapping$ContainsMapLike.m' is a possible heterogenous collection. It cannot be verified. Please declare a valid type to get rid of this warning. null
+Oct 15, 2012 9:00:57 PM com.github.jmkgreen.morphia.mapping.MappedField discover
+WARNING: The multi-valued field 'com.github.jmkgreen.morphia.testmodel.Article.attributes' is a possible heterogenous collection. It cannot be verified. Please declare a valid type to get rid of this warning. null
+Oct 15, 2012 9:00:57 PM com.github.jmkgreen.morphia.mapping.MappedField discover
+WARNING: The multi-valued field 'com.github.jmkgreen.morphia.testmodel.Article.attributes' is a possible heterogenous collection. It cannot be verified. Please declare a valid type to get rid of this warning. null
+Oct 15, 2012 9:00:57 PM com.github.jmkgreen.morphia.mapping.validation.MappingValidator$LogLine log
+WARNING: MapKeyDifferentFromString complained about com.github.jmkgreen.morphia.testmodel.Article.attributes : Maps cannot be keyed by Object (Map<Object,?>); Use a parametrized type that is supported (Map<String/Enum/Long/ObjectId/..., ?>)
+Oct 15, 2012 9:00:57 PM com.github.jmkgreen.morphia.mapping.validation.MappingValidator$LogLine log
+INFO: MapKeyDifferentFromString complained about com.github.jmkgreen.morphia.testmodel.Article.attributes : Maps cannot be keyed by Object (Map<Object,?>); Use a parametrized type that is supported (Map<String/Enum/Long/ObjectId/..., ?>)
+Tests run: 33, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.155 sec
+Running com.github.jmkgreen.morphia.query.TestMandatoryId
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.github.jmkgreen.morphia.issue148.TestAsListPerf
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.github.jmkgreen.morphia.logging.MorphiaLogrFactoryTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.github.jmkgreen.morphia.ext.EnumValueConverterTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.github.jmkgreen.morphia.mapping.UpdateRetainsClassInfoTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.github.jmkgreen.morphia.mapping.ByteArrayMappingTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.github.jmkgreen.morphia.mapping.validation.fieldrules.PropertyAndEmbeddedTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.github.jmkgreen.morphia.mapping.validation.classrules.SerializedMapTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
+Running com.github.jmkgreen.morphia.mapping.EnumMappingTest
+Oct 15, 2012 9:00:57 PM com.github.jmkgreen.morphia.mapping.DefaultMapper validate
+WARNING: The type(s) for the query/update may be inconsistent; using an instance of type 'com.github.jmkgreen.morphia.mapping.EnumMappingTest$Foo$1' for the field 'com.github.jmkgreen.morphia.mapping.EnumMappingTest$ContainsEnum.foo' which is declared as 'com.github.jmkgreen.morphia.mapping.EnumMappingTest$Foo'
+ --@--org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:59)
+Oct 15, 2012 9:00:57 PM com.github.jmkgreen.morphia.mapping.DefaultMapper validate
+WARNING: The type(s) for the query/update may be inconsistent; using an instance of type 'com.github.jmkgreen.morphia.mapping.EnumMappingTest$Foo$1' for the field 'com.github.jmkgreen.morphia.mapping.EnumMappingTest$ContainsEnum.foo' which is declared as 'com.github.jmkgreen.morphia.mapping.EnumMappingTest$Foo'
+ --@--org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:59)
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.github.jmkgreen.morphia.issue47.TestEmbedLoop
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.001 sec
+Running com.github.jmkgreen.morphia.issue80.TestGenericInheritanceMappings
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.001 sec
+Running com.github.jmkgreen.morphia.converters.IterableConverterNullPointerExceptionTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.github.jmkgreen.morphia.issue241.TestMapping
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+
+Results :
+
+Failed tests: 
+  testAddressInsertPerf(com.github.jmkgreen.morphia.TestPerf)
+
+Tests run: 272, Failures: 1, Errors: 0, Skipped: 18
+
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] Morphia Build ..................................... SUCCESS [0.113s]
+[INFO] morphia ........................................... SUCCESS [14.810s]
+[INFO] morphia-no-proxy-deps ............................. FAILURE [10.897s]
+[INFO] JSR303 Validation ................................. SKIPPED
+[INFO] Logging via SLF4J ................................. SKIPPED
+[INFO] JRebel Plugin ..................................... SKIPPED
+[INFO] Guice Plugin ...................................... SKIPPED
+[INFO] EntityScanner Plugin .............................. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 26.217s
+[INFO] Finished at: Mon Oct 15 21:00:57 UTC 2012
+[INFO] Final Memory: 8M/20M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.6:test (default-test) on project morphia-no-proxy-deps: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/travis/builds/jmkgreen/morphia/no-proxy-deps-tests/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <goals> -rf :morphia-no-proxy-deps
+
+Done. Build script exited with: 1

@@ -8,7 +8,7 @@ travisCommand:
 reactor:
   summaryStart: 'Reactor Summary'
   summaryEnd: '------'
-  extractRegex: "([[\\w]*[\\s|-|:]]+)[\\.]+([[\\w]*[\\s|-|:]]+)"
+  extractRegex: "^\\[INFO\\] (.*) [\\.]+ (SUCCESS|SKIPPED|FAILURE)( \\[(.*)s\\])?"
 
 parsingRuleGroups:
   cleanString:

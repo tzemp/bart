@@ -1,6 +1,6 @@
 package ch.uzh.zempt.reporting;
 
-import ch.uzh.zempt.parser.ParserSummary;
+import ch.uzh.zempt.parser.Parser;
 import com.google.gson.Gson;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -24,13 +24,13 @@ public class ReportingRequest {
         this.gson = new Gson();
     }
 
-    public void post(ParserSummary parserSummary, List<String> log, String project) throws IOException {
+    public void post(Parser parser, String project) throws IOException {
         HttpClient httpClient = HttpClientBuilder.create().build();
         HttpPost post = new HttpPost(ReportingRequest.POST_URL);
 
         // add header
         post.setHeader("User-Agent", USER_AGENT);
-        Report report = new Report(project, parserSummary, log);
+        Report report = new Report(project, parser);
         StringEntity input = new StringEntity(gson.toJson(report));
         input.setContentType("application/json");
 
