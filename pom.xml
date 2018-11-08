@@ -6,11 +6,23 @@
     <packaging>jar</packaging>
     <version>1.0.0</version>
     <name>bart</name>
-    <url>http://maven.apache.org</url>
+    <url>https://bart.tzemp.ch</url>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/tzemp/bart</url>
+    </scm>
+
     <build>
         <plugins>
             <plugin>
@@ -20,13 +32,14 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>ch.uzh.zempt.parser.Parser</mainClass>
+                            <mainClass>ch.uzh.tzemp.parser.Parser</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -90,4 +103,12 @@
             <version>RELEASE</version>
         </dependency>
     </dependencies>
+
+    <developers>
+        <developer>
+            <id>tzemp</id>
+            <name>Timothy Zemp</name>
+            <email>timothy.zemp@uzh.ch</email>
+        </developer>
+    </developers>
 </project>
